@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace HomeCinema.Web.Models
+{
+    public class SearchRepoModel
+    {
+      
+            public SearchRepoModel()
+            {
+            }
+
+            public string Title { get; set; }
+            public string Year { get; set; }
+            public string imdbID { get; set; }
+            public string Type { get; set; }
+            public string Poster { get; set; }
+            public string Actors { get; set; }
+            public string Plot { get; set; }
+            public DateTime ReleaseDate { get; set; }
+            public string Director { get; set; }
+            public string Description { get; set; }
+            public string Response { get; set; }
+        }
+  
+}

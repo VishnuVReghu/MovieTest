@@ -1,0 +1,36 @@
+﻿<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading clearfix">
+            <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Omdb Movies</h4>
+            <div class="input-group">
+                <input id="inputSearchMovies" type="search" ng-model="filterMovies" class="form-control shortInputSearch" placeholder="Filter, search movies..">
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" ng-click="search();"><i class="glyphicon glyphicon-search"></i></button>
+                    <button class="btn btn-primary" ng-click="clearSearch();"><i class="glyphicon glyphicon-remove-sign"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="movie in Movies | filter:filterMovies">
+                    <div class="media">
+                        <a class="pull-left" title="View {{movie.Title}} details">
+                            <img ng-src="{{movie.Image}} style="margin-left: 35px" width="350" height="350" alt="" />
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{movie.Title}}</h4>
+                            Release Date: <strong>{{movie.ReleaseDate}}</strong>
+                            <br />
+                            Director: <strong>{{movie.Director}}</strong>
+                            <br />
+                            Description: <strong>{{movie.Description}}</strong>
+                            <br />
+                        </div>
+                    </div>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
