@@ -10,7 +10,7 @@
         $scope.pageClass = 'page-movies';
         $scope.movie = { GenreId: 1, Rating: 1, NumberOfStocks: 1 };
 
-        $scope.genres = [];
+        //$scope.genres = [];
         $scope.isReadOnly = false;
         $scope.AddMovie = AddMovie;
         $scope.prepareFiles = prepareFiles;
@@ -25,20 +25,6 @@
         $scope.datepicker = {};
 
         var movieImage = null;
-
-        function loadGenres() {
-            apiService.get('/api/genres/', null,
-            genresLoadCompleted,
-            genresLoadFailed);
-        }
-
-        function genresLoadCompleted(response) {
-            $scope.genres = response.data;
-        }
-
-        function genresLoadFailed(response) {
-            notificationService.displayError(response.data);
-        }
 
         function AddMovie() {
             AddMovieModel();
@@ -107,8 +93,7 @@
             $scope.movie.NumberOfStocks = newVal;
             console.log($scope.movie);
         }
-
-        loadGenres();
+        
     }
 
 })(angular.module('homeCinema'));

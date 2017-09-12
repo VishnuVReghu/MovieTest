@@ -57,26 +57,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\EntityBaseConfiguration.cs" />
-    <Compile Include="Configurations\GenreConfiguration.cs" />
-    <Compile Include="Configurations\RentalConfiguration.cs" />
     <Compile Include="Configurations\MovieConfiguration.cs" />
     <Compile Include="Configurations\RoleConfiguration.cs" />
-    <Compile Include="Configurations\CustomerConfiguration.cs" />
-    <Compile Include="Configurations\StockConfiguration.cs" />
     <Compile Include="Configurations\UserRoleConfiguration.cs" />
     <Compile Include="Configurations\UserConfiguration.cs" />
-    <Compile Include="Extensions\RentalExtensions.cs" />
-    <Compile Include="Extensions\StockExtensions.cs" />
-    <Compile Include="Extensions\CustomerExtensions.cs" />
     <Compile Include="HomeCinemaContext.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />
-    <Compile Include="Migrations\201709121247097_Initial Commit.cs" />
-    <Compile Include="Migrations\201709121247097_Initial Commit.Designer.cs">
-      <DependentUpon>201709121247097_Initial Commit.cs</DependentUpon>
+    <Compile Include="Migrations\201709121911242_Initial Commit.cs" />
+    <Compile Include="Migrations\201709121911242_Initial Commit.Designer.cs">
+      <DependentUpon>201709121911242_Initial Commit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,8 +92,8 @@
     <Content Include="uk\MockData.resources.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709121247097_Initial Commit.resx">
-      <DependentUpon>201709121247097_Initial Commit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709121911242_Initial Commit.resx">
+      <DependentUpon>201709121911242_Initial Commit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

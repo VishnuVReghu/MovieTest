@@ -8,7 +8,6 @@
     function movieEditCtrl($scope, $location, $routeParams, apiService, notificationService, fileUploadService) {
         $scope.pageClass = 'page-movies';
         $scope.movie = {};
-        $scope.genres = [];
         $scope.loadingMovie = true;
         $scope.isReadOnly = false;
         $scope.UpdateMovie = UpdateMovie;
@@ -27,7 +26,6 @@
         function loadMovie() {
 
             $scope.loadingMovie = true;
-
             apiService.get('/api/movies/details/' + $routeParams.id, null,
             movieLoadCompleted,
             movieLoadFailed);
@@ -37,26 +35,13 @@
             $scope.movie = result.data;
             $scope.loadingMovie = false;
 
-            loadGenres();
+
         }
 
         function movieLoadFailed(response) {
             notificationService.displayError(response.data);
         }
 
-        function genresLoadCompleted(response) {
-            $scope.genres = response.data;
-        }
-
-        function genresLoadFailed(response) {
-            notificationService.displayError(response.data);
-        }
-
-        function loadGenres() {
-            apiService.get('/api/genres/', null,
-            genresLoadCompleted,
-            genresLoadFailed);
-        }
 
         function UpdateMovie() {
             if (movieImage) {

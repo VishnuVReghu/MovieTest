@@ -20,9 +20,9 @@ namespace HomeCinema.Web.Infrastructure.Core
         protected readonly IDataRepositoryFactory _dataRepositoryFactory;
         protected IEntityBaseRepository<Error> _errorsRepository;
         protected IEntityBaseRepository<Movie> _moviesRepository;
-        protected IEntityBaseRepository<Rental> _rentalsRepository;
-        protected IEntityBaseRepository<Stock> _stocksRepository;
-        protected IEntityBaseRepository<Customer> _customersRepository;
+        //protected IEntityBaseRepository<Rental> _rentalsRepository;
+        //protected IEntityBaseRepository<Stock> _stocksRepository;
+        //protected IEntityBaseRepository<Customer> _customersRepository;
         protected IUnitOfWork _unitOfWork;
 
         private HttpRequestMessage RequestMessage;
@@ -66,25 +66,25 @@ namespace HomeCinema.Web.Infrastructure.Core
                 _moviesRepository = _dataRepositoryFactory.GetDataRepository<Movie>(RequestMessage);
             }
 
-            if (entities.Any(e => e.FullName == typeof(Rental).FullName))
-            {
-                _rentalsRepository = _dataRepositoryFactory.GetDataRepository<Rental>(RequestMessage);
-            }
+            //if (entities.Any(e => e.FullName == typeof(Rental).FullName))
+            //{
+            //    _rentalsRepository = _dataRepositoryFactory.GetDataRepository<Rental>(RequestMessage);
+            //}
 
-            if (entities.Any(e => e.FullName == typeof(Customer).FullName))
-            {
-                _customersRepository = _dataRepositoryFactory.GetDataRepository<Customer>(RequestMessage);
-            }
+            //if (entities.Any(e => e.FullName == typeof(Customer).FullName))
+            //{
+            //    _customersRepository = _dataRepositoryFactory.GetDataRepository<Customer>(RequestMessage);
+            //}
 
-            if (entities.Any(e => e.FullName == typeof(Stock).FullName))
-            {
-                _stocksRepository = _dataRepositoryFactory.GetDataRepository<Stock>(RequestMessage);
-            }
+            //if (entities.Any(e => e.FullName == typeof(Stock).FullName))
+            //{
+            //    _stocksRepository = _dataRepositoryFactory.GetDataRepository<Stock>(RequestMessage);
+            //}
 
-            if (entities.Any(e => e.FullName == typeof(User).FullName))
-            {
-                _stocksRepository = _dataRepositoryFactory.GetDataRepository<Stock>(RequestMessage);
-            }
+            //if (entities.Any(e => e.FullName == typeof(User).FullName))
+            //{
+            //    _stocksRepository = _dataRepositoryFactory.GetDataRepository<Stock>(RequestMessage);
+            //}
         }
 
         private void LogError(Exception ex)

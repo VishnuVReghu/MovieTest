@@ -5,7 +5,6 @@ namespace HomeCinema.Web.Mappings
 {
     public static class OmdbMovieMapper
     {
-
         public static IEnumerable<MovieViewModel> MapPocoToRepoAll(SearchRepoModel modelSource)
         {
             var listMovieRepoData = new List<MovieViewModel>();

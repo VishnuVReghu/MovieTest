@@ -1,15 +1,6 @@
 ﻿<div id="editMovieWrapper">
     <hr>
     <div class="row" ng-if="!loadingMovie">
-        <!-- left column -->
-        <!--<div class="col-xs-3">
-            <div class="text-center">
-                <img ng-src="../../Content/images/movies/{{movie.Image}}" class="avatar img-responsive" alt="avatar">
-                <h6>Change photo...</h6>
-
-                <input type="file" ng-file-select="prepareFiles($files)">
-            </div>
-        </div>-->
 
         <!-- edit form column -->
         <div class="col-xs-9 personal-info">
@@ -31,33 +22,11 @@
                             <input class="form-control" name="title" type="text" ng-model="movie.Description"
                                    validate-on="blur" required required-message="'Movie description is required'">
                         </div>
-                        <!--<div class="col-xs-4 selectContainer">
-                            <label class="control-label">Description</label>
-                            <select ng-model="movie.GenreId" class="form-control black" ng-options="option.ID as option.Name for option in genres" required></select>
-                            <input type="hidden" name="GenreId" ng-value="movie.GenreId" />
-                        </div>-->
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
-                        <!--<div class="col-xs-4">
-                            <label class="control-label">Director</label>
-                            <input class="form-control" type="text" ng-model="movie.Director" name="director"
-                                   validate-on="blur" required required-message="'Movie director is required'">
-                        </div>
-
-                        <div class="col-xs-4">
-                            <label class="control-label">Writer</label>
-                            <input class="form-control" type="text" ng-model="movie.Writer" name="writer"
-                                   validate-on="blur" required required-message="'Movie writer is required'">
-                        </div>
-
-                        <div class="col-xs-4">
-                            <label class="control-label">Producer</label>
-                            <input class="form-control" type="text" ng-model="movie.Producer" name="producer"
-                                   validate-on="blur" required required-message="'Movie producer is required'">
-                        </div>-->
                         <div class="col-xs-4">
                             <label class="control-label">State</label>
                             <input class="form-control" type="text" ng-model="movie.State" name="state"
@@ -89,26 +58,8 @@
                                 </span>
                             </p>
                         </div>
-
-                        <!--<div class="col-xs-6">
-                            <label class="control-label">Youtube trailer</label>
-                            <input class="form-control" type="text" ng-model="movie.TrailerURI" name="trailerURI"
-                                   validate-on="blur" required required-message="'Movie trailer is required'" ng-pattern="/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$/"
-                                   invalid-message="'You must enter a valid YouTube URL'">
-                        </div>-->
                     </div>
                 </div>
-
-                <!--<div class="form-group">
-                    <label class="control-label">Description</label>
-                    <textarea class="form-control" ng-model="movie.Description" name="description" rows="3"
-                              validate-on="blur" required required-message="'Movie description is required'" />
-                </div>-->
-
-                <!--<div class="form-group col-xs-12">
-                    <label class="control-label">Rating</label>
-                    <span component-rating="{{movie.Rating}}" ng-model="movie.Rating" class="form-control"></span>
-                </div>-->
                 <br />
                 <div class="form-group col-xs-4">
                     <label class="control-label"></label>

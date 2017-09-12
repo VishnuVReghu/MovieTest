@@ -13,7 +13,7 @@ namespace HomeCinema.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201709121247097_Initial Commit"; }
+            get { return "201709121911242_Initial Commit"; }
         }
         
         string IMigrationMetadata.Source

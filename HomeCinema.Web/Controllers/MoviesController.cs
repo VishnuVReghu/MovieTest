@@ -6,15 +6,11 @@ using HomeCinema.Web.Infrastructure.Core;
 using HomeCinema.Web.Models;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http;
 using HomeCinema.Web.Infrastructure.Extensions;
-using HomeCinema.Data.Extensions;
 using Newtonsoft.Json;
 using System.Web.Configuration;
 using HomeCinema.Web.Mappings;
@@ -26,8 +22,7 @@ namespace HomeCinema.Web.Controllers
     public class MoviesController : ApiControllerBase
     {
         private readonly IEntityBaseRepository<Movie> _moviesRepository;
-        private readonly IEntityBaseRepository<User> _userRepository;
-
+  
         private static int count = 0;
 
         public MoviesController(IEntityBaseRepository<Movie> moviesRepository,
@@ -45,7 +40,7 @@ namespace HomeCinema.Web.Controllers
             {
                 HttpResponseMessage response = null;
                 var userId = 1;
-                if (User.Identity.Name == "criss")
+                if (User.Identity.Name == WebConfigurationManager.AppSettings["User2"])
                 {
                     userId = 2;
                 
@@ -77,7 +72,7 @@ namespace HomeCinema.Web.Controllers
         }
 
         [AllowAnonymous]
-        [Route("{page:int=0}/{pageSize=1}/{filter?}")]
+        //[Route("{page:int=0}/{pageSize=1}/{filter?}")]
         public HttpResponseMessage Get(HttpRequestMessage request, int? page, int? pageSize, string filter = null)
         {
             int currentPage = page.Value;
