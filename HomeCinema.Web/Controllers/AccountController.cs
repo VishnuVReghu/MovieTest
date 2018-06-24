@@ -28,6 +28,7 @@ namespace HomeCinema.Web.Controllers
             _moviesRepository = moviesRepository;
         }
 
+        //This is a comment
         [AllowAnonymous]
         [Route("authenticate")]
         [HttpPost]
