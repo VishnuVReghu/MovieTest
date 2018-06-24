@@ -29,6 +29,7 @@ namespace HomeCinema.Web.Controllers
         }
 
         //This is a comment
+        //One more change
         [AllowAnonymous]
         [Route("authenticate")]
         [HttpPost]
