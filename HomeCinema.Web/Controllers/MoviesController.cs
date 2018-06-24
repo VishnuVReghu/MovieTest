@@ -32,6 +32,7 @@ namespace HomeCinema.Web.Controllers
             _moviesRepository = moviesRepository;
         }
 
+        // First Movie Comment
         [AllowAnonymous]
         [Route("latest")]
         public HttpResponseMessage Get(HttpRequestMessage request)
